@@ -5,4 +5,4 @@ JavaScript object for vertical navigation with sub-navigation.
 
 ### Additional resources used in the project
 
-- jQuery(http://jquery.com/)
+- [jQuery](http://jquery.com/)
