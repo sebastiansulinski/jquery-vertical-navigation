@@ -1,6 +1,6 @@
 $(function() {
 
-    var verticalNavigation = new SSDSystem.VerticalNavigation()
+    var verticalNavigation = new SSDSystem.VerticalNavigation();
     verticalNavigation.init();
 
 });
