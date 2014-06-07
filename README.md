@@ -12,3 +12,7 @@ JavaScript object for vertical navigation with sub-navigation.
 - [jQuery](http://jquery.com/)
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 - [Google Fonts : Open Sans](https://www.google.com/fonts/specimen/Open+Sans)
+
+### Project Page
+
+- [Vertical Navigation with jQuery](http://sebastiansulinski.github.io/jquery-vertical-navigation)
