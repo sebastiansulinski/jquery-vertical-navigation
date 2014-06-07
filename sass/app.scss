@@ -1,11 +1,11 @@
 
-$body-bg: #eee;
+$body-bg: #fff;
 $font-color: #666;
 
-$column-bg: #17232f;
+$primary-color: #17232f;
 
 
-$content-left-bg : lighten($column-bg, 4%);
+$content-left-bg : lighten($primary-color, 10%);
 $content-left-width : 250px;
 
 
@@ -15,11 +15,11 @@ $navigation-color-hover : #fff;
 $navigation-bg-active : #427c97;
 $navigation-color-active : #fff;
 
-$navigation-border-color : $column-bg;
+$navigation-border-color : lighten($content-left-bg, 10%);
 $navigation-icon-color-hover : $navigation-bg-active;
 
-$navigation-sub-bg : $column-bg;
-$navigation-sub-border-color : lighten($navigation-border-color, 7%);
+$navigation-sub-bg : $primary-color;
+$navigation-sub-border-color : lighten($navigation-sub-bg, 7%);
 $navigation-sub-color-active : #fff;
 
 
@@ -119,6 +119,9 @@ h1 {
         text-align: center;
 
       }
+
+      -webkit-transition: color 0.2s ease;
+      transition: color 0.2s ease;
 
       &:hover {
 
