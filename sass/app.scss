@@ -1,10 +1,198 @@
 
 $body-bg: #eee;
-$font-color: #999;
+$font-color: #666;
+
+$column-bg: #17232f;
+
+
+$content-left-bg : lighten($column-bg, 4%);
+$content-left-width : 250px;
+
+
+$navigation-color : #ADADAD;
+$navigation-color-hover : #fff;
+
+$navigation-bg-active : #427c97;
+$navigation-color-active : #fff;
+
+$navigation-border-color : $column-bg;
+$navigation-icon-color-hover : $navigation-bg-active;
+
+$navigation-sub-bg : $column-bg;
+$navigation-sub-border-color : lighten($navigation-border-color, 7%);
+$navigation-sub-color-active : #fff;
+
+
+
 
 body {
 
   background-color: $body-bg;
   color: $font-color;
+  font-family: "Open sans", Sans-serif;
+  padding: 0;
+  margin: 0;
+
+}
+
+a {
+
+  text-decoration: none;
+
+}
+
+h1 {
+
+  margin-top: 0;
+
+}
+
+#contentWrapper {
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+#contentLeft {
+
+  z-index: 10;
+  width: $content-left-width;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $content-left-bg;
+
+}
+
+#contentRight {
+
+  padding: 1.3rem 2rem;
+  margin-left: $content-left-width;
+
+}
+
+
+
+#leftNavigation {
+
+  margin: 2rem 0;
+
+  &, li ul {
+
+    list-style: none;
+    padding: 0;
+
+  }
+
+  li {
+
+    a {
+
+      font-size: 0.875rem;
+      display: block;
+      padding: 0.8rem 1rem 0.8rem 3rem;
+      color: $navigation-color;
+      border-bottom: solid 1px $navigation-border-color;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      position: relative;
+
+
+      &, .leftNavIcon {
+
+        line-height: 120%;
+
+      }
+
+
+      .leftNavIcon {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 3rem;
+        padding: 0.8rem 0;
+        text-align: center;
+
+      }
+
+      &:hover {
+
+        color: $navigation-color-hover;
+
+      }
+
+    }
+
+    ul {
+
+      display: none;
+
+      margin: 0;
+      background-color: $navigation-sub-bg;
+
+      li {
+
+        a {
+
+          border-bottom: solid 1px $navigation-sub-border-color;
+
+        }
+
+        &:last-child {
+
+          a {
+
+            border-bottom: none;
+
+          }
+
+        }
+
+        &.active {
+
+          a {
+
+            color: $navigation-sub-color-active;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    &.active {
+
+      > a {
+
+        color: $navigation-color-active;
+
+      }
+
+      ul {
+
+        display: block;
+
+      }
+
+    }
+
+  }
+
+  > li {
+
+    &.active {
+
+      background-color: $navigation-bg-active;
+
+    }
+
+  }
 
 }

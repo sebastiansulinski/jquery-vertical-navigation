@@ -3,53 +3,50 @@
 <head>
     <title>Vertical navigation with jQuery</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-<div id="wrapper">
+<div id="contentWrapper">
 
-    <div id="wrapperInner">
+    <div id="contentLeft">
 
-        <div id="columnLeft">
+        <ul id="leftNavigation">
 
-            <ul id="leftNavigation">
+            <li class="active">
+                <a href="#"><i class="fa fa-coffee leftNavIcon"></i> About us</a>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-angle-right leftNavIcon"></i> Our History</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-angle-right leftNavIcon"></i> Our Team</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-flask leftNavIcon"></i> Products</a>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-angle-right leftNavIcon"></i> Garden</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-angle-right leftNavIcon"></i> Office</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-angle-right leftNavIcon"></i> Home</a>
+                    </li>
+                </ul>
+            </li>
 
-                <li>
-                    <a href="#">About us</a>
-                    <ul>
-                        <li>
-                            <a href="#">Our History</a>
-                        </li>
-                        <li>
-                            <a href="#">Our Team</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Products</a>
-                    <ul>
-                        <li>
-                            <a href="#">Garden</a>
-                        </li>
-                        <li>
-                            <a href="#">Office</a>
-                        </li>
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                    </ul>
-                </li>
+        </ul>
 
-            </ul>
+    </div>
 
-        </div>
+    <div id="contentRight">
 
-        <div id="columnRight">
-
-            <h1>Vertical navigation with jQuery</h1>
-
-        </div>
+        <h1 id="heading">Vertical navigation with jQuery</h1>
 
     </div>
 

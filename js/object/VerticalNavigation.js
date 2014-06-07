@@ -26,6 +26,18 @@ SSDSystem.VerticalNavigation.prototype = {
 
     },
 
+    replaceHeading : function(thisHeading) {
+
+        "use strict";
+
+        if (!this.isEmpty(thisHeading)) {
+
+            $('h1#heading').html(thisHeading.trim());
+
+        }
+
+    },
+
     leftNavigationActiveMain : function(thisLi) {
 
         "use strict";
@@ -50,6 +62,8 @@ SSDSystem.VerticalNavigation.prototype = {
             .siblings()
             .find('li')
             .removeClass('active');
+
+        this.replaceHeading(thisLi.text());
 
     },
 
