@@ -1,5 +1,5 @@
 $(function() {
 
-
+    $('#leftNavigation').ssdVerticalNavigation();
 
 });
