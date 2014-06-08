@@ -16,3 +16,13 @@ JavaScript object for vertical navigation with sub-navigation.
 ### Project Page
 
 - [Vertical Navigation with jQuery](http://sebastiansulinski.github.io/jquery-vertical-navigation)
+
+### Usage instructions
+
+To instantiate the object use:
+
+```javascript
+var verticalNavigation = new SSDSystem.VerticalNavigation();
+    verticalNavigation.init();
+```
+
