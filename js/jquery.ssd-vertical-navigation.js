@@ -81,8 +81,8 @@
                 .addClass(settings.classActive)
                 .siblings()
                 .removeClass(settings.classActive)
-                .closest('ul')
-                .closest('li')
+                .parent('ul')
+                .parent('li')
                 .siblings()
                 .find('li')
                 .removeClass(settings.classActive);
