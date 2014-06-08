@@ -29,9 +29,7 @@ There are also a few options you can use:
 
 ```javascript
 $('#leftNavigation').ssdVerticalNavigation({
-    classMaster : 'master'
+    classMaster : 'master',
     classActive : 'active'
-    replaceWithAnchorText : true
-    replaceElement : 'h1'
 });
 ```
