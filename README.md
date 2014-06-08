@@ -26,3 +26,9 @@ var verticalNavigation = new SSDSystem.VerticalNavigation();
     verticalNavigation.init();
 ```
 
+By default the object will look for the `ul` with the id `leftNavigation` - you can change it by passing the argument to the init() method with the id of your choice:
+
+```javascript
+var verticalNavigation = new SSDSystem.VerticalNavigation();
+    verticalNavigation.init('verticalNavigation');
+```
