@@ -7,58 +7,9 @@
         var settings = $.extend({
 
             classMaster : 'master',
-            classActive : 'active',
-            replaceWithAnchorText : true,
-            replaceElement : 'h1'
+            classActive : 'active'
 
         }, options);
-
-
-
-        function _isEmpty(thisValue) {
-
-            "use strict";
-
-            if ($.isArray(thisValue)) {
-
-                return (thisValue.length <= 0);
-
-            } else {
-
-                return (
-                    thisValue === '' ||
-                    thisValue === null ||
-                    typeof thisValue === 'undefined'
-                );
-
-            }
-
-        }
-
-
-        function _shouldReplaceHeading(thisHeading) {
-
-            "use strict";
-
-            return (
-                settings.replaceWithAnchorText &&
-                !_isEmpty(thisHeading)
-            );
-
-        }
-
-
-        function _replaceHeading(thisHeading) {
-
-            "use strict";
-
-            if (_shouldReplaceHeading(thisHeading)) {
-
-                $(settings.replaceElement).html(thisHeading.trim());
-
-            }
-
-        }
 
 
         function _leftNavigationActiveMain(thisLi) {
@@ -73,36 +24,16 @@
         }
 
 
-        function _leftNavigationActiveSub(thisLi) {
-
-            "use strict";
-
-            thisLi
-                .addClass(settings.classActive)
-                .siblings()
-                .removeClass(settings.classActive)
-                .parent('ul')
-                .parent('li')
-                .siblings()
-                .find('li')
-                .removeClass(settings.classActive);
-
-            _replaceHeading(thisLi.text());
-
-        }
-
-
-        function _leftNavigationClick(thisParentUl, thisLi) {
+        function _leftNavigationClick(thisParentUl, thisLi, event) {
 
             "use strict";
 
             if (thisParentUl.hasClass(settings.classMaster)) {
 
+                event.preventDefault();
+                event.stopPropagation();
+
                 _leftNavigationActiveMain(thisLi);
-
-            } else {
-
-                _leftNavigationActiveSub(thisLi);
 
             }
 
@@ -119,14 +50,11 @@
 
                 try {
 
-                    event.preventDefault();
-                    event.stopPropagation();
-
                     var thisA = $(this),
                         thisLi = thisA.parent('li'),
                         thisParentUl = thisLi.parent('ul');
 
-                    _leftNavigationClick(thisParentUl, thisLi);
+                    _leftNavigationClick(thisParentUl, thisLi, event);
 
                 } catch (errorMessage) {
 
