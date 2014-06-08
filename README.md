@@ -28,8 +28,10 @@ $('#leftNavigation').ssdVerticalNavigation();
 There are also a few options you can use:
 
 ```javascript
-classMaster : 'master'
-classActive : 'active'
-replaceWithAnchorText : true
-replaceElement : 'h1'
+$('#leftNavigation').ssdVerticalNavigation({
+    classMaster : 'master'
+    classActive : 'active'
+    replaceWithAnchorText : true
+    replaceElement : 'h1'
+});
 ```
