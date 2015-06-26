@@ -7,7 +7,8 @@
         var settings = $.extend({
 
             classMaster : 'master',
-            classActive : 'active'
+            classActive : 'active',
+            classClickable : 'clickable'
 
         }, options);
 
@@ -28,7 +29,7 @@
 
             "use strict";
 
-            if (thisParentUl.hasClass(settings.classMaster)) {
+            if (thisParentUl.hasClass(settings.classMaster) && ! thisLi.hasClass(settings.classClickable)) {
 
                 event.preventDefault();
                 event.stopPropagation();

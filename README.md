@@ -30,6 +30,11 @@ There are also a few options you can use:
 ```javascript
 $('#leftNavigation').ssdVerticalNavigation({
     classMaster : 'master',
-    classActive : 'active'
+    classActive : 'active',
+    classClickable : 'clickable'
 });
 ```
+
+Class `master` is going to be automatically applied to the top level `ul` tag.
+Class `active` will be applied to the most recently clicked `li` tag.
+Class `clickable` should be applied to the first level `li` tag, that needs to link to some page rather than just being a trigger for the sub-navigation.
